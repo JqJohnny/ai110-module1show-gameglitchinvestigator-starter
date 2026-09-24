@@ -37,23 +37,28 @@ HINT_MESSAGES = {
 
 ## 3. Debugging and testing your fixes
 
-- How did you decide whether a bug was really fixed? I manually tested to see if the program was working as intended. I.E. Go Higher for a number thats actually higher than the guess.
+- How did you decide whether a bug was really fixed? 
+A: I manually tested to see if the program was working as intended. I.E. Go Higher for a number thats actually higher than the guess.
 - Describe at least one test you ran (manual or using pytest)
-
   and what it showed you about your code.
-- Did AI help you design or understand any tests? How?
+A: Two tests I added to pytest were testing to see if the right hint message was being used.
 
+- Did AI help you design or understand any tests? How?
+A: The AI wrote the test and I verified that they were correctly testing parts of the program.
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
-
+A: Streamlit reruns the whole script top to bottom on every click, so it forgets everything unless you use session_state — a dictionary that survives reruns and remembers things like the secret number and score.
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+  A: Asking for an initial understanding of what the program is SUPPOSED to do and what it currently does.
 - What is one thing you would do differently next time you work with AI on a coding task?
+  A: Manually verify a bit more before asking about a specific bug.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+  A: Overall, the project has not changed my mind about AI generated code. I already knew AI generated code needed to be verified and not trusted blindly.
