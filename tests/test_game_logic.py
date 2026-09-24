@@ -1,16 +1,34 @@
 from logic_utils import check_guess
 
+
 def test_winning_guess():
     # If the secret is 50 and guess is 50, it should be a win
     result = check_guess(50, 50)
     assert result == "Win"
+
 
 def test_guess_too_high():
     # If secret is 50 and guess is 60, hint should be "Too High"
     result = check_guess(60, 50)
     assert result == "Too High"
 
+
 def test_guess_too_low():
     # If secret is 50 and guess is 40, hint should be "Too Low"
     result = check_guess(40, 50)
+    assert result == "Too Low"
+
+
+def test_guess_one_above_secret_is_too_high():
+    # Regression test: the hint text used to be swapped (a "Too High"
+    # outcome showed a "Go HIGHER!" message instead of "Go LOWER!").
+    # A guess just one above the secret must still classify as "Too High".
+    result = check_guess(51, 50)
+    assert result == "Too High"
+
+
+def test_guess_one_below_secret_is_too_low():
+    # Same regression, other direction: a guess just one below the secret
+    # must still classify as "Too Low", not get flipped to "Too High".
+    result = check_guess(49, 50)
     assert result == "Too Low"
