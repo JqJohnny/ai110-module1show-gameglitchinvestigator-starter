@@ -58,7 +58,8 @@ A: Streamlit reruns the whole script top to bottom on every click, so it forgets
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
   A: Asking for an initial understanding of what the program is SUPPOSED to do and what it currently does.
+  Additionally, I had pushed the fixes directly to GitHub, skipping pushing the FIXME comments.
 - What is one thing you would do differently next time you work with AI on a coding task?
   A: Manually verify a bit more before asking about a specific bug.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
-  A: Overall, the project has not changed my mind about AI generated code. I already knew AI generated code needed to be verified and not trusted blindly.
+  A: Overall, the project has not changed my mind about AI generated code. I already knew AI generated code needed to be verified and not trusted blindly. One thing I would note is that with how fast AI is, its really easy to not want to read what it's doing as that's the slowest part of the process.
